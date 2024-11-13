@@ -11,8 +11,8 @@
     <header>
         <h1>Biblioteka w Książkowicach Wielkich</h1>
     </header>
-
-    <div class='container'>
+    
+    <div class='row'>
         <section class='left'>
 
 
@@ -20,9 +20,25 @@
 
 
                     <ol>
-                        <li>
+                       
+                            <?php
+                            
+                            $mysqli = new mysqli("localhost","my_user","","biblioteka");
 
-                        </li>
+            // Check connection
+            if ($mysqli -> connect_errno) {
+              echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+              exit();
+            }
+                            
+            $query = "SELECT imie, nazwisko from autorzy" ;
+            $result = $mysqli->query($query);           
+                            
+            while($row = $result->fetch_assoc()){
+                echo "<li>" . $row['imie'] . $row['nazwisko'] . "</li>";
+            }              
+                            ?>
+                     
                     </ol>
 
 
@@ -37,7 +53,7 @@
 
         </section>
 
-        <div class='right-upper-lower-container'>
+        <div class='right-side'>
             <section class='right-upper'>
             
                 <h3>Dodaj czytelnika</h3>
@@ -59,13 +75,28 @@
 
             <section class='right-lower'>
             
+
+            <?php 
+            
+            $mysqli = new mysqli("localhost","my_user","","biblioteka");
+
+            // Check connection
+            if ($mysqli -> connect_errno) {
+              echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+              exit();
+            }
+            ?>
+            
+            
+            
             </section>
+</div>
+        
+</div>
 
-        </div>
-    </div>
-
-
-    <footer></footer>
+    <footer>
+        <p>Projekt strony:00000000</p>
+    </footer>
 
     
 </body>
