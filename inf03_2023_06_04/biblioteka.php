@@ -23,7 +23,7 @@
                        
                             <?php
                             
-                            $mysqli = new mysqli("localhost","my_user","","biblioteka");
+                            $mysqli = new mysqli("localhost","root","","biblioteka");
 
             // Check connection
             if ($mysqli -> connect_errno) {
@@ -31,7 +31,7 @@
               exit();
             }
                             
-            $query = "SELECT imie, nazwisko from autorzy" ;
+            $query = "SELECT imie, nazwisko FROM `autorzy` order by nazwisko ASC;" ;
             $result = $mysqli->query($query);           
                             
             while($row = $result->fetch_assoc()){
@@ -58,15 +58,11 @@
             
                 <h3>Dodaj czytelnika</h3>
 
-                <form method='post' action='biblioteka.php'>
+                <form method='POST' action=''>
                     <label> imie: <input type=text name ='imie'> </label>
                     <label> nazwisko: <input type=text name ='nazwisko'> </label>
-                    <label> symbol: <input type=number name ='imie'> </label>
-                    <input type="submit" value="Dodaj">
-
-
-                    
-
+                    <label> symbol: <input type=number name ='symbol'> </label>
+                    <input type="submit" value="Dodaj" name = 'button'>
                 </form>
 
 
@@ -78,13 +74,24 @@
 
             <?php 
             
-            $mysqli = new mysqli("localhost","my_user","","biblioteka");
+            $conn = new mysqli("localhost","root","","biblioteka");
 
             // Check connection
-            if ($mysqli -> connect_errno) {
+            if ($conn -> connect_errno) {
               echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
               exit();
             }
+
+            $imie = $_POST['imie'];
+            $nazwisko = $_POST['nazwisko'];
+            $symbol = $_POST['symbol'];
+            $sql = "INSERT INTO czytelnicy (imie, nazwisko, kod) VALUES ('$imie','$nazwisko', $symbol)";
+            $conn->query($sql);
+            // if(issset($_POST['button'])) {
+            //     $conn->query($sql);
+            // };
+            echo "<p>Czytelnik $imie $nazwisko został(a) dodany do bazy danych</p>"
+
             ?>
             
             
@@ -95,7 +102,7 @@
 </div>
 
     <footer>
-        <p>Projekt strony:00000000</p>
+        <p>Projekt strony:Filip Zmurowski</p>
     </footer>
 
     
