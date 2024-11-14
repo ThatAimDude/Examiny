@@ -1,0 +1,102 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+footer{
+    padding: 0;
+    margin: 0;
+}
+
+#motor{
+    display: block;
+    position: absolute;
+    left: 15%;
+    z-index: -1;
+    width: 70%;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: rgba(60, 120,160, 0.9);
+    font-size: 150%;
+    padding: 10px;
+    color: white;
+    
+}
+
+.left{
+    background-color: rgba(0, 100, 0, 0.6);
+    margin: 2%;
+    width: 75%;
+    height: 600px;
+    font-size: 120%;
+    box-shadow: 0 10px 10px 0 dimgray;
+    overflow-y: auto
+    
+}
+.right-container {
+    display: flex; /* Ensure the right container is treated as a flex container */
+    flex-direction: column; /* Stack the two right sections vertically */
+    width: 15%; /* Set the right container to 25% of the main width */
+    margin: 2%;
+}
+
+.right-upper{
+    background-color: rgba(0, 100, 0, 0.6);
+    margin: 1%;
+    height: 300px;
+    font-size: 120%;
+    box-shadow: 0 10px 10px 0 dimgray;
+    
+}
+
+.right-lower{
+    background-color: rgba(0, 100, 0, 0.6);
+    margin: 1%;
+    height: 300px;
+    font-size: 120%;
+    box-shadow: 0 10px 10px 0 dimgray;
+}
+
+footer{
+    background-color: rgba(60, 120, 160, 0.9);
+    color: white;
+    padding: 10px;
+}
+
+h1, h2{
+    text-align: center;
+    font-style: italic;
+
+}
+
+dl{
+    
+}
+
+
+
+dt{
+    color: white;
+   
+}
+
+a{
+    color: white;
+}
+
+dd{
+    padding: 1%
+}
+
+dd:hover{
+    background-color: lightgreen;
+}
