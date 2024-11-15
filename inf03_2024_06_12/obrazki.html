@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <title>Efekty obrazu</title>
 </head>
 <body>
@@ -13,23 +13,21 @@
     <main>
         
         <section class="top-left">
+           
             <img src="pszczola.jpg" alt="„pszczoła na fioletowym kwiatku">
-            <input type="radio" name="effect" value="Blur">Blur</input>
-            <input type="radio" name="effect" value="Blur">Sepia</input>
-            <input type="radio" name="effect" value="Blur">Negatyw</input>
+            <input type="radio" name="effect" value="Blur" id="checkbox">Blur</input>
+            <input type="radio" name="effect" value="Sepia" id="checkbox">Sepia</input>
+            <input type="radio" name="effect" value="Negatyw" id="checkbox">Negatyw</input>
             <button type="submit">Zastosuj</button>
+      
 
         </section>
 
         <section class="top-right">
 
-
             <img src="pomarancza.jpg" alt="drzewo pomarańczy">
             <button type="submit">Kolorowy</button>
             <button type="submit">Czarno-biały</button>
-
-
-
 
         </section>
    
@@ -38,7 +36,7 @@
 
 
             <img src="owoce.jpg" alt="Kosz pełen owoców">
-            <input type="range" min="0" max="100" value="100">
+            <input type="range" min="0" max="100" value="100" class="slider">
             <button type="submit">Zastosuj</button>
 
         </section>
@@ -46,7 +44,7 @@
         <section class="bottom-right">
 
             <img src="zolw.jpg" alt="Żółw w wodzie">
-            <input type="range" min="0" max="250" value="100">
+            <input type="range" min="0" max="250" value="100" class="slider">
             <button type="submit">Zastosuj</button>
 
         </section>
