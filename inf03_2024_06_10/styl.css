@@ -1,0 +1,104 @@
+body{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.top{
+    display: flex;
+}
+
+
+header{
+    background-color: darkcyan;
+    color: white;
+    width: 50%;
+    height: 100px;
+    letter-spacing: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+footer{
+    background-color: darkcyan;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+
+.karta1{
+    background-color: azure;
+    width: 30%;
+    margin: 1%;
+    box-shadow: 4px 4px 8px dimgray;
+
+    
+}
+
+.karta2{
+    background-color: azure;
+    width: 30%;
+    margin: 1%;
+    box-shadow: 4px 4px 8px dimgray;
+}
+
+.karta3{
+    background-color: azure;
+    width: 30%;
+    margin: 1%;
+    box-shadow: 4px 4px 8px dimgray;
+}
+
+.karta1 img, .karta2 img, .karta3 img{
+    width: 100%;
+}
+
+
+p{
+    margin: 15px;
+}
+
+h2{
+    margin: 15px;
+}
+
+h3{
+    margin: 15px;
+}
+
+a{
+    color: white;
+}
+
+
+/* Dla nagłówka piątego stopnia: kolor tła Teal, szerokość 100%, wyrównanie tekstu do środka,
+marginesy wewnętrzne górny i dolny 10 px, pozostałe 0
+*/ 
+
+h5{
+    background-color: teal;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px ;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* ‒ Dla bloku cytatów: wyrównanie tekstu do środka, marginesy wewnętrzne górny i dolny 30 px,
+pozostałe 0, czcionka pochylona
+‒ Drugi i trzeci cytat jest usunięty (nie jest wyświetlany)*/
+
+.quote{
+    text-align: center;
+    padding: 30px 0 30px 0;
+}
+
+.karty{
+    display: flex;
+    flex-direction: row;
+}
