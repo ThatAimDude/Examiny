@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style2.css">
     <title>Efekty obrazu</title>
 </head>
 <body>
@@ -13,21 +13,65 @@
     <main>
         
         <section class="top-left">
-           
-            <img src="pszczola.jpg" alt="„pszczoła na fioletowym kwiatku">
-            <input type="radio" name="effect" value="Blur" id="checkbox">Blur</input>
-            <input type="radio" name="effect" value="Sepia" id="checkbox">Sepia</input>
-            <input type="radio" name="effect" value="Negatyw" id="checkbox">Negatyw</input>
-            <button type="submit">Zastosuj</button>
-      
-
+            <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku" id="image">
+            <div class="checkboxes">
+                <input type="radio" name="effect" value="Blur" id="blur-checkbox">Blur
+                <input type="radio" name="effect" value="Sepia" id="sepia-checkbox">Sepia
+                <input type="radio" name="effect" value="Negatyw" id="negatyw-checkbox">Negative
+            </div>
+            <button type="submit" id="apply-effect">Zastosuj</button>
         </section>
+        
+        <script>
+            document.getElementById("apply-effect").addEventListener('click', () => {
+                const image = document.getElementById('image');
+                const blurCheckbox = document.getElementById('blur-checkbox');
+                const sepiaCheckbox = document.getElementById('sepia-checkbox');  // Corrected variable name
+                const Negatyw = document.getElementById('negatyw-checkbox');
+        
+                if (blurCheckbox.checked) {
+                    image.classList.add('blur');  // Corrected syntax for adding a class
+                }
+
+                if (sepiaCheckbox.checked) {
+                    image.classList.add('sepia');  // Corrected syntax for adding a class
+                }
+
+                if (Negatyw.checked) {
+                    image.classList.add('negatyw');  // Corrected syntax for adding a class
+                }
+
+            });
+        </script>
+        
 
         <section class="top-right">
 
-            <img src="pomarancza.jpg" alt="drzewo pomarańczy">
-            <button type="submit">Kolorowy</button>
-            <button type="submit">Czarno-biały</button>
+            <img src="pomarancza.jpg" alt="drzewo pomarańczy" id="image2">
+            <div class="buttons2">
+            <button type="submit" id="kolor">Kolorowy</button>
+            <button type="submit" id="czarnobialy">Czarno-biały</button>
+
+            <script>
+
+                const image = document.getElementById('image2')
+                const button1 = document.getElementById('kolor')
+                const button2 = document.getElementById('czarnobialy')
+
+                button1.addEventListener('click', () => { 
+                    image.classList.remove('sepia');
+
+                });
+
+                button2.addEventListener('click', () => { 
+                    image.classList.add('sepia');
+
+                });
+
+
+            </script>
+
+        </div>
 
         </section>
    
@@ -35,17 +79,46 @@
         <section class="bottom-left">
 
 
-            <img src="owoce.jpg" alt="Kosz pełen owoców">
-            <input type="range" min="0" max="100" value="100" class="slider">
-            <button type="submit">Zastosuj</button>
+            <img src="owoce.jpg" alt="Kosz pełen owoców" id="image3">
+            <input type="range" min="0" max="100" value="100" class="slider" id="slider1">
+            <button type="submit" id="button">Zastosuj</button>
+
+            <script>
+                
+                const slider = document.getElementById('slider1')
+                const image3 = document.getElementById('image3')
+                const button = document.getElementById('button')
+
+                button.addEventListener('click', () => {
+
+                    const slidervalue = slider.value / 100;
+                    image3.style.opacity = slidervalue 
+
+                });
+
+
+
+            </script>
 
         </section>
 
         <section class="bottom-right">
 
-            <img src="zolw.jpg" alt="Żółw w wodzie">
-            <input type="range" min="0" max="250" value="100" class="slider">
-            <button type="submit">Zastosuj</button>
+            <img src="zolw.jpg" alt="Żółw w wodzie" id="image4">
+            <input type="range" min="0" max="250" value="100" class="slider" id="slider2">
+            <button type="submit" id="button">Zastosuj</button>
+
+            <script>
+                const image1 = document.getElementById('image4');
+                const slider1 = document.getElementById('slider2');
+                const button3 = document.getElementById('button');
+            
+                button3.addEventListener('click', () => {
+                    const slidervalue = slider1.value;
+                    image1.style.filter = `brightness(${slidervalue}%)`;
+                });
+            </script>
+            
 
         </section>
     
