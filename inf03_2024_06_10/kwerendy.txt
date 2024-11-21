@@ -1,0 +1,4 @@
+1.SELECT count(id), pensja FROM `pracownicy` group by pensja order by pensja DESC;
+2.SELECT imie, nazwisko, s.nazwa FROM `pracownicy` as p join stanowiska as s on p.stanowiska_id = s.id where p.staz > 10;
+3.SELECT nazwisko, pensja FROM `pracownicy` where staz BETWEEN 10 and 20;
+4.alter TABLE pracownicy add minPensja int

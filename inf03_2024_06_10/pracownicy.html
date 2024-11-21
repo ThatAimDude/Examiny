@@ -72,26 +72,37 @@
             <p>- Krzysztof</p>
         </section>
 
-        <section style="display: none;" id="quote1">
+        <section style="display: none;" id="quote2">
             <q>Nie bój się porażek, im więcej ich rozwiążesz, tym szybciej osiągniesz cel</q>
             <p>- Joanna</p>
         </section>
 
-        <section style="display: none;" id="quote1">
+        <section style="display: none;" id="quote3">
             <q >Niezadowolony pracownik jest dla mnie źródłem nauki</q>
             <p>- Ewa</p>
         </section>
 
 
         <script>
-            document.addEventListener('click', () => {
+            document.addEventListener('DOMContentLoaded', () => {
                 const quote1 = document.getElementById('quote1')
                 const quote2 = document.getElementById('quote2')
                 const quote3 = document.getElementById('quote3')
 
-                function toggleQuotes() {
-                    if (quote = )
-                }
+                quote1.addEventListener('click', () => {
+                    quote1.style.display = 'none'
+                    quote2.style.display = 'block'
+                });
+
+                quote2.addEventListener('click', () => {
+                    quote2.style.display = 'none'
+                    quote3.style.display = 'block'
+                });
+
+                quote3.addEventListener('click', () => {
+                    quote3.style.display = 'none'
+                    quote1.style.display = 'block'
+                });
 
             });
 
