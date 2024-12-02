@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl7.css">
+    <title>Salon kosmetyczny</title>
+</head>
+<body>
+    
+    
+    <main>
+
+        <section class="leftmain">
+            <section class="left">
+
+                <h2>Nasza oferta</h2>
+
+                <ol>
+                    
+                    <li><a href="twarz.html">Oczyszczanie twarzy</a>  
+
+                        <ul>
+                            <li>Peeling</li>
+                            <li>Maska</li>
+                        
+                        </ul>
+                    </li>
+                    <li>Masaż</li>
+                    <li>Makijaż</li>
+                    
+                </ol>
+                <p><a href="index.html">Strona główna</a></p>
+
+            
+            </section>
+
+            <section class="leftLower">
+                <img src="obraz1.jpg" alt="Personel">
+            </section>
+        </section>
+
+
+    <section class="rightmain">
+        <header>
+            <h1>Usługi Kosemetyczne</h1>
+        </header>
+
+        <section class="right">
+            
+            <h3>Kalkulator ceny wizyty</h3>
+
+            <div class="inputs">
+            
+                <div class="inputbar">
+            <input type="checkbox" id="checkbox1" value="45" name="zabieg">
+            <label for="checkbox1">Peeling</label>
+        </div>
+        <div class="inputbar">
+            <input type="checkbox" id="checkbox2" value="30" name="zabieg">
+            <label for="checkbox1">Maska</label>
+        </div>
+        <div class="inputbar">
+            <input type="checkbox" id="checkbox3" value="20" name="zabieg">
+            <label for="checkbox1">Masaż twarzy</label>
+        </div>
+        <div class="inputbar">
+            <input type="checkbox" id="checkbox4" value="50" name="zabieg">
+            <label for="checkbox1">Makijaż</label>
+        </div>
+
+            <button id="button1">Oblicz Cene</button>
+            
+            <script>
+
+                function Sumacen(){
+
+                    const checkboxchecked = document.querySelectorAll('input[name="zabieg"]:checked')
+
+                    let suma = 0
+                    checkboxchecked.forEach((checkbox)=>{
+                        suma += parseFloat(checkbox.value)
+
+
+                    });
+                    
+                    const wynikcena = document.getElementById('wynik');
+                    wynikcena.textContent = `Cena zabiegów: ${suma}`;
+
+
+                }
+
+                document.getElementById('button1').addEventListener('click', Sumacen)
+
+
+
+            </script>
+            
+            <p id="wynik">Cena zabiegów: <suma></p>
+
+        
+        </div>
+
+        </section>
+    </section>
+</main>
+
+
+
+    <footer>
+       <p>Autor: 000000000</p>
+    </footer>
+
+
+</body>
+</html>
