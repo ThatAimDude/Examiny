@@ -1,0 +1,5 @@
+SELECT kolor, marka FROM `samochody` where kolor = 'niebieski';
+2.SELECT count(model) FROM `samochody` where stan = 'bardzo dobry' and stan = 'bardzo dobry';
+3.UPDATE `samochody` SET `stan`='dobry' WHERE rocznik < '2004';
+4.create user 'jan'@'localhost' identified by 'janKowalski1@';
+5.grant select, update, insert on samochody.samochody to 'jan'@'localhost';
